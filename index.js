@@ -15,16 +15,6 @@ function getFilePro(pathFile){
     .catch((erro) => findErro(erro))
 }
 
-//lógica simples
-function getFile(pathFile) {
-    fs.readFile(pathFile,{encoding:'utf-8'}, (erro, texto) =>{
 
-        if(erro){
-            findErro(erro);
-        }
-
-        console.log(chalk.green(texto))
-    })
-}
 
 getFilePro('./arquivos/texto1.md');
