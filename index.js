@@ -4,7 +4,6 @@
 import chalk from 'chalk';
 import * as fs from 'fs';
 
-
 function extractLinks(textFile){
     const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
     const result = [];
@@ -14,7 +13,7 @@ function extractLinks(textFile){
         result.push({ [cont[1]]: cont[2]})
     }
 
-    return result;
+    return result.length === 0? 'Não ná links': result;
 }
 
 function findErro(erro){
@@ -22,10 +21,10 @@ function findErro(erro){
 }
 
 //função async
-async function getFileAsync(pathFile){
+export default async function getFileAsync(pathFile){
     try {
     const textFile = await fs.promises.readFile(pathFile,{encoding:'utf-8'})
-    console.log(extractLinks(textFile))
+    return extractLinks(textFile);
     
     } catch(erro){
         findErro(erro);
@@ -34,5 +33,3 @@ async function getFileAsync(pathFile){
         console.log(chalk.yellow('Operação finalizada'));
     }
 }
-
-getFileAsync('./arquivos/texto1.md');
