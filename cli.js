@@ -1,18 +1,18 @@
 import chalk from 'chalk';
 import getFileAsync from   './index.js';
-import checkURLs from './http-validacao.js';
+import urlCheck from './http-validacao.js';
 
 
 const path = process.argv;
 
-async function processFile(pathFile) {
+async function fileProcess(pathFile) {
     const result = await getFileAsync(pathFile[2]);
-    if(path[3] === 'validate'){
-        console.log(chalk.green('Lista | Links Validados'), checkURLs(result));
-    }else{
-        console.log(chalk.yellow('Lista | Links'), result);
+    if (path[3] === 'validar') {
+      console.log(chalk.yellow('links validados'), 
+      await urlCheck(result));
+    } else {
+      console.log(chalk.yellow('lista de links'), result);
     }
-    
-}
+  }
 
-processFile(path);
+fileProcess(path);

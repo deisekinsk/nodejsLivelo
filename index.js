@@ -13,7 +13,7 @@ function extractLinks(textFile){
         result.push({ [cont[1]]: cont[2]})
     }
 
-    return result.length === 0? 'Não ná links': result;
+    return result.length === 0? 'Não há links': result;
 }
 
 function findErro(erro){
@@ -28,8 +28,5 @@ export default async function getFileAsync(pathFile){
     
     } catch(erro){
         findErro(erro);
-    } finally{
-    
-        console.log(chalk.yellow('Operação finalizada'));
     }
 }
