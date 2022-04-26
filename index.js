@@ -1,7 +1,7 @@
 //how to read files in nodejs
 //fs file system | promises
 
-import chalk from 'chalk';
+//import chalk from 'chalk';
 import * as fs from 'fs';
 
 function extractLinks(textFile){
@@ -17,7 +17,7 @@ function extractLinks(textFile){
 }
 
 function findErro(erro){
-    throw new Error(chalk.red(erro.code, 'Sem arquivo.'));
+    throw new Error (erro.code, 'Sem arquivo');
 }
 
 //função async
