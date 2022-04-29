@@ -2,15 +2,23 @@
   "name": "lib-markdown-kinsk",
   "version": "1.0.0",
   "description": "NodeJS get file function and unit test",
-  "homepage":"",
+  "homepage":"https://github.com/deisekinsk/nodejsLivelo",
   "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./test",
-    "cli": "node cli.js ./arquivos/texto1.md"
+  "main": "./cli.js",
+  "bin": {
+    "lib-markdown-kinsk": "./cli.js"
   },
-  "keywords": [],
-  "author": "",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "jest ./test",
+    "cli": "node ./src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deisekinsk/nodejsLivelo"
+  },
+  "keywords": ["markdown", "URL","test nodejs"],
+  "author": "Deise Kinsk 🐋🐸<kinsk@msn.com>(https://br.linkedin.com/in/deise-kinsk-profile)",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.1",
