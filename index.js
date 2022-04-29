@@ -30,3 +30,8 @@ export default async function getFileAsync(pathFile){
         findErro(erro);
     }
 }
+
+function mathFunction(valueA,valueB){
+    const operation = ((valueA*valueA)/valueB);
+    return operation;
+}
