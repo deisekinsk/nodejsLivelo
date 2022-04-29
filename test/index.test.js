@@ -17,4 +17,10 @@ describe ('getFileAsync::', () => {
     const result = await getFileAsync( './test/arquivo/texto1.md')
     expect(result).toEqual(arrayResult)
   })
+  it('deve ser "Não há links"', async () =>{
+    const result = await getFileAsync('./test/arquivo/texto2.md')
+    expect(result).toBe('Não há links')
+  })
+  //criar um teste throw()
+
 })

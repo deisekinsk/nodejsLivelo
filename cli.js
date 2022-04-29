@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import chalk from 'chalk';
 import getFileAsync from   './index.js';
 import urlCheck from './http-validacao.js';

@@ -1,7 +1,8 @@
 {
-  "name": "lib-markdown",
+  "name": "lib-markdown-kinsk",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS get file function and unit test",
+  "homepage":"",
   "type": "module",
   "main": "index.js",
   "scripts": {
